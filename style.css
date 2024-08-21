@@ -1,0 +1,41 @@
+ @import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+
+   .navbar-dark .navbar-brand {
+    color: #f8ba01;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+font-family: 'Readex Pro', sans-serif;
+
+}
+canvas {
+  border-radius: 25px;
+}
+.nav{
+  font-family: 'Readex Pro', sans-serif;
+}
+#video-ads {
+    border-radius: 25px;
+}
+
+/*display container*/
+#imageContainer {
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .imageFrame {
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    img {
+      max-width: 50px;
+      height: auto;
+      
+
+    }

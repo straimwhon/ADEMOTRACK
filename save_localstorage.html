@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Selected localStorage Data</title>
+</head>
+<body>
+
+    <h2>Select localStorage Data to Display</h2>
+
+    <label for="selectKey">Select Data Key:</label>
+    <select id="selectKey"></select>
+    <br>
+    <button onclick="displaySelectedData()">Display Selected Data</button>
+
+    <div id="displayResult"></div>
+
+    <script>
+        // Populate select element with localStorage keys
+        var selectElement = document.getElementById('selectKey');
+        for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            var option = document.createElement('option');
+            option.value = key;
+            option.textContent = key;
+            selectElement.appendChild(option);
+        }
+
+        function displaySelectedData() {
+            var selectedKey = document.getElementById('selectKey').value;
+
+            // Retrieve data based on the selected key
+            var selectedData = localStorage.getItem(selectedKey);
+
+
+            const imageData = JSON.parse(selectedData);
+
+            console.log(imageData)
+
+            /* Display the selected data
+            var displayResult = document.getElementById('displayResult');
+            displayResult.innerHTML = '<strong>Selected Data:</strong> ' + selectedData;
+            */
+        }
+    </script>
+
+</body>
+</html>
